@@ -2,32 +2,102 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <title>ML API</title>
+  <title>Vehicle Insurance Claim Fraud Detection</title>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
-   <div class="login">
-      <h1>Predict Claim Fraudulent</h1>
-	  
-	  <form action= "{{url_for('predict')}}" method="post">
-	     <input type="text" name="MaritalStatus" placeholder="Marital Status" required/>
-		 <input type="text" name="Fault" placeholder="Fault" required/>
-		 <input type="text" name="PolicyType" placeholder="Policy Type" required/> 
-		 <input type="text" name="VehicleCategory" placeholder="Vehicle Category" required/> 
-		 <input type="text" name="VehiclePrice" placeholder="Vehicle Price" required/>
-		 <input type="text" name="DriverRating" placeholder="Driver Rating" required/>
-		 <input type="text" name="Days_Policy_Accident" placeholder="Days Policy Accident" required/>
-		 <input type="text" name="Days_Policy_Claim" placeholder="Days Policy Claim" required/>
-		 <input type="text" name="PastNumberOfClaims" placeholder="Past Number Of Claims" required/>
-		 <input type="text" name="AgeOfPolicyHolder" placeholder="Age Of Policy Holder" required/>
-		 <input type="text" name="PoliceReportFiled" placeholder="Police Report Filed" required/>
-		 <input type="text" name="WitnessPresent" placeholder="Witness Present" required/>
-		 <input type="text" name="AgentType" placeholder="Agent Type" required/>
-		 <input type="text" name="AddressChange_Claim" placeholder="Address Change Claim" required/>
-		 <input type="text" name="BasePolicy" placeholder="Base Policy" required/>
+	<div class="testbox">
+		<form action= "{{url_for('predict')}}" method="post">
+			<div class="banner">
+		  		<h1>Vehicle Insurance Claim Fraud Detection</h1>
+			</div>
+		  
+			<br/>
+        			<p>Vehicle Insurance Claim Fraud Detection Prediction</p>
+        		<br/>
+			<div class="colums">  
+	    	 		<div class="item">
+            				<label for="name">Marital Status<span>*</span></label>
+            				<input id="name" type="text" name="name" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="eaddress">Fault<span>*</span></label>
+            				<input id="eaddress" type="text"   name="eaddress" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="phone">Policy Type<span>*</span></label>
+            				<input id="phone" type="tel"   name="phone" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="street">Vehicle Category<span>*</span></label>
+            				<input id="street" type="text"   name="street" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="city">Vehicle Price<span>*</span></label>
+            				<input id="city" type="text"   name="city" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="state">Driver Rating<span>*</span></label>
+            				<input id="state" type="text"   name="state" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="zip">Days Policy Accident<span>*</span></label>
+            				<input id="zip" type="text"   name="zip" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="zip">Days Policy Claim<span>*</span></label>
+            				<input id="zip" type="text"   name="zip" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="phone">Past Number of Claims<span>*</span></label>
+            				<input id="phone" type="tel"   name="phone" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="street">Age of Policy Holder<span>*</span></label>
+            				<input id="street" type="text"   name="street" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="city">Police Report Filed<span>*</span></label>
+            				<input id="city" type="text"   name="city" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="state">Witness Present<span>*</span></label>
+            				<input id="state" type="text"   name="state" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="zip">Agent Type<span>*</span></label>
+            				<input id="zip" type="text"   name="zip" required/>
+          			</div>
+
+          			<div class="item">
+            				<label for="zip">Address Change Claim<span>*</span></label>
+            				<input id="zip" type="text"   name="zip" required/>
+          			</div>
+			</div>
+			
+		 	<div class="item">
+          			<label for="zip">Base Policy<span>*</span></label>
+          			<input id="zip" type="text"   name="zip" required/>
+        		</div>
 		 
 		 
-		 <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
-	  </form>
+		 	<div class="btn-block">
+          			<button type="submit" href="/">Predict</button>
+        		</div>
+		</form>
 	  
 	 <br>
 	 <br>
