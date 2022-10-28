@@ -1,0 +1,133 @@
+
+      html, body {
+      min-height: 100%;
+      background-image: url("background.jpg");
+      }
+
+      body, div, form, input, select, textarea, label, p { 
+      padding: 0;
+      margin: 0;
+      outline: none;
+      font-family: Roboto, Arial, sans-serif;
+      font-size: 14px;
+      color: #666;
+      line-height: 22px;
+      }
+
+      h1 {
+      position: absolute;
+      margin: 0;
+      font-size: 40px;
+      color: #fff;
+      z-index: 2;
+      line-height: 83px;
+      }
+
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+
+      .testbox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: inherit;
+      padding-top:50px;
+      padding-bottom:50px;
+      padding-left: 380px;
+      padding-right: 380px ;
+      }
+      
+      form {
+      width: 100%;
+      padding: 20px;
+      border-radius: 8px;
+      background: rgb(255, 255, 255);
+      box-shadow: 0 0 8px  #000000; 
+      }
+
+      .banner {
+      position: relative;
+      height: 300px;
+      background-image: url("cover.png");  
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      }
+
+      .banner::after {
+      content: "";
+      background-color: rgba(0, 0, 0, 0.3); 
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      }
+
+      input, select, textarea {
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      }
+
+      input {
+      width: calc(100% - 10px);
+      padding: 5px;
+      }
+
+      textarea {
+      width: calc(100% - 12px);
+      padding: 5px;
+      }
+
+      .item:hover p, .item:hover i, .question:hover p, .question label:hover, input:hover::placeholder {
+      color:  #669999;
+      }
+
+      .item input:hover, .item select:hover, .item textarea:hover {
+      border: 1px solid transparent;
+      box-shadow: 0 0 3px 0  #669999;
+      color: #669999;
+      }
+
+      .item {
+      position: relative;
+      margin: 10px 0;
+      }
+
+      .item span {
+      color: red;
+      }
+
+      .colums {
+      display:flex;
+      justify-content:space-between;
+      flex-direction:row;
+      flex-wrap:wrap;
+      }
+
+      .colums div {
+      width:48%;
+      }
+
+      .btn-block {
+      margin-top: 10px;
+      text-align: center;
+      }
+
+      button {
+      width: 150px;
+      padding: 10px;
+      border: none;
+      border-radius: 5px; 
+      background:  #44c5c5;
+      font-size: 16px;
+      color: #fff;
+      cursor: pointer;
+      }
+
+      button:hover {
+      background:  #014444;
+      }
