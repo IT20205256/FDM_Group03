@@ -20,11 +20,6 @@ def predict():
     
     return render_template('Index.html', prediction_text= 'Is this claim is a Fraud:{}'.format(output))
 
-@app.route('/predict_api', methods=['POST'])
-def predict_api():
-    
-    data = request.get_json(force=True)
-    
 
 if __name__ =="__main__":
     app.run(debug=True)
