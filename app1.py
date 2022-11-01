@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.tree import DecisionTreeClassifier
+
 
 data = pd.read_csv("C:\\Users\\Kishan raj\\Desktop\\Kishan\\fraud_oracle.csv")
 
@@ -88,22 +88,24 @@ data["PastNumberOfClaims"]= data["PastNumberOfClaims"].apply(convertPastClaims)
 
 #Function to convert Age of Policy Holder into Numerical
 def convertPolicyHolderAge(str):
- if str=="18 to 20":
+if str=="16 to 17":
     return 1
- elif str=="21 to 25":
+elif str=="18 to 20":
     return 2
- elif str=="26 to 30":
+elif str=="21 to 25":
     return 3
- elif str=="31 to 35":
+elif str=="26 to 30":
     return 4
- elif str=="36 to 40":
+elif str=="31 to 35":
     return 5
- elif str=="41 to 50":
+elif str=="36 to 40":
     return 6
- elif str=="51 to 65":
+elif str=="41 to 50":
     return 7
- else:
-       return 8
+elif str=="51 to 65":
+    return 8
+else:
+       return 9
 data["AgeOfPolicyHolder"]= data["AgeOfPolicyHolder"].apply(convertPolicyHolderAge)
 
 #Function to convert Police Report Filed into Numerical
@@ -193,12 +195,22 @@ features = ["MaritalStatus","Fault", "PolicyType", "VehicleCategory", "VehiclePr
 x = data.loc[:,features]
 y = data.loc[:,"FraudFound_P"]
 
-X_train, X_test, Y_train, Y_test = train_test_split(x, y, random_state=42, train_size = .75)
 
-clf = DecisionTreeClassifier(random_state=42)
-clf.fit(X_train,Y_train)
+# Using Random Forest to train the model
+X_train1, X_test1, y_train1, y_test1 = train_test_split(x, y, train_size=0.75)
 
-y_pred = clf.predict(X_test)
+
+from sklearn.ensemble import RandomForestClassifier
+
+#Create a Gaussian Classifier
+ranclf=RandomForestClassifier(n_estimators=100)
+
+#Train the model using the training sets y_pred=clf.predict(X_test)
+ranclf.fit(X_train1,y_train1)
+
+y_pred1=ranclf.predict(X_test1)
+
+
 
 import pickle
 #Saving model to disk
