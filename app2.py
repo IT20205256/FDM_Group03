@@ -18,7 +18,7 @@ def predict():
     
     output = prediction[0]
     
-    return render_template('Index.html', prediction_text= 'Is this claim is a Fraud:{}'.format(output))
+    return render_template('Index.html', prediction_text= 'Is this claim is a Fraud:{}'.format(output).replace('0','No').replace('1','Yes'))
 
 
 if __name__ =="__main__":
