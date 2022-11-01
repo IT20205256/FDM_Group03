@@ -170,7 +170,7 @@ def convertPolicyAcc(str):
     return 0
  elif str=="8 to 15":
     return 1
- elif str=="16 to 30":
+ elif str=="15 to 30":
     return 2
  elif str=="more than 30":
     return 3
