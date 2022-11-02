@@ -20,7 +20,7 @@ def predict():
     
     return render_template('Index.html', prediction_text= 'Is this claim is a Fraud:{}'.format(output).replace('0','No').replace('1','Yes'))
 
-@app.route('/View', methods=['POST'])
+@app.route('/View', methods=['POST', 'GET'])
 def View():
     return render_template('view.html')
 
